@@ -1,1 +1,0 @@
-Toolbar collection list

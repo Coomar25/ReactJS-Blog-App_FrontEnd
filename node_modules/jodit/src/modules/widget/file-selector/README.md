@@ -1,1 +1,0 @@
-Jodit File Selector widgets

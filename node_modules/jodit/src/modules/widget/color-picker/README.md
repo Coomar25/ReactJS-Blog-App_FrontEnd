@@ -1,1 +1,0 @@
-Jodit Color Picker widgets

@@ -1,1 +1,0 @@
-Status bar module
