@@ -3,8 +3,12 @@ import Cookies from 'js-cookie'
 
 export const setTokenInCookie = (token, user) => {
     const userString = JSON.stringify(user);
-    Cookies.set('token', token, { path: '/'});
-    Cookies.set('user', userString, {path: '/'});
+
+    // cookie lai 4 din samma store garam hai tw
+    const expirationDate = new Date();
+    expirationDate.setDate(expirationDate.getDate() + 1 );
+    Cookies.set('token', token, { expires: expirationDate, path: '/'});
+    Cookies.set('user', userString, { expires:expirationDate, path: '/'});
 }
 
 export const getTokenFromCookie = () => {
@@ -13,3 +17,4 @@ export const getTokenFromCookie = () => {
     const user = userString ? JSON.parse(userString) : null;
     return { token, user };
 };
+

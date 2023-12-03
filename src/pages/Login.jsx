@@ -25,6 +25,7 @@ const Login = () => {
             console.log(user);
             setTokenInCookie(token, user);
             navigate('/admin');
+            window.location.reload();
         }catch(error){
             console.log('Login Failed', error);
         }

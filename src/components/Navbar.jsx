@@ -5,8 +5,10 @@ import "../public/AliAssets/css/dark.css";
 import "../public/AliAssets/css/responsive.css";
 import { Link } from "react-router-dom";
 import Register from "../pages/Register";
+import { getTokenFromCookie } from "../service/TokenService";
 
 const Navbar = () => {
+  const { token } = getTokenFromCookie();
   return (
     <div>
       <div class="theme-mode">
@@ -144,38 +146,38 @@ const Navbar = () => {
                   {/* <!--Desktop menu--> */}
                   <ul class="main-menu d-none d-lg-inline font-small">
                     <li>
-                      <Link to="/">
-                        Home
-                      </Link>
+                      <Link to="/"> Home </Link>
                     </li>
                     <li>
-                      <Link to="/single">
-                        Single
-                      </Link>
+                      <Link to="/single">Single</Link>
                     </li>
-                    <li>
-                      <Link to="/Write">
-                        Write
-                      </Link>
-                    </li>
-                
-                    <li>
-                      <Link to="/login">
-                        Login
-                      </Link>
-                    </li>
-                    <li>
-                      {}
-                      <Link to="/register">
-                        <Register/>
-                      </Link>
-                    </li>
+                    {/* ========================================================================================================== */}
+                    {/* =========================================== Conditiona Navbar here ======================================= */}
+                    {/* ========================================================================================================== */}
+
+                    {token ? (
+                      <li>
+                        <Link to="/Write">Write</Link>
+                      </li>
+                    ) : null}
+
+                    {token ? null : (
+                      <li>
+                        <Link to="/login">Login</Link>
+                      </li>
+                    )}
+
+                    {token ? null : (
+                       <li>
+                       {}
+                       <Link to="/register">
+                         <Register />
+                       </Link>
+                     </li>
+                    )}
+
+                   
                   </ul>
-
-
-
-
-
 
                   {/* <!--Mobile menu--> */}
                   <ul id="mobile-menu" class="d-block d-lg-none text-muted">
