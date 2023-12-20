@@ -5,10 +5,7 @@ import "quill-image-uploader/dist/quill.imageUploader.min.css";
 import Form from "react-bootstrap/Form";
 import { getTokenFromCookie } from "../service/TokenService";
 import axios from "axios";
-
-
-
-
+import { successTOast, errorToast, warningToast } from "../service/ToastMessaage";
 
 
 
@@ -22,10 +19,14 @@ const Write = () => {
 
   // image preview garne upload garese
   const [imagefile, setImagefile] = useState(null);
+  const MIN_CONTENT_LENGTH = 1000;
 
   const  handleBlogPostSubmit = async (e) => {
       e.preventDefault();
-      console.log(title, category, content, imageormedia);
+      if (content.length < MIN_CONTENT_LENGTH) {
+        warningToast(`Content must be at least ${MIN_CONTENT_LENGTH} characters long.`);
+        return;
+      }
 
       const postData = {
         title: title,
@@ -37,17 +38,24 @@ const Write = () => {
       }
 
    
-      axios.post('http://localhost:5000/post/addpost', postData, {
+      axios.post(`${import.meta.env.VITE_API_URL}/post/addpost`, postData, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
       })
         .then(response => {
-          console.log(response.data);
+          successTOast(response.data.success);
+          console.log(response.data.success);
+          setTitle('');
+          setCategory('');
+          setImageormedia('');
+          setContent('');
         })
         .catch(error => {
           if (error.response) {
+            errorToast(error.response.data.warning);
+            warningToast(error.response.data.error);
             console.error('Error response data:', error.response.data);
             console.error('Status code:', error.response.status);
             console.error('Headers:', error.response.headers);
@@ -93,10 +101,9 @@ const Write = () => {
       </Form>
       <div className="selectCategory mt-4 mb-4 ">
         <Form.Select value={category} onChange={(e)=>setCategory(e.target.value)} aria-label="Default select example">
-          <option>Select the category</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option value="programming">Programming</option>
+          <option value="tech">Tech</option>
+          <option value="news">News</option>
         </Form.Select>
       </div>
 
