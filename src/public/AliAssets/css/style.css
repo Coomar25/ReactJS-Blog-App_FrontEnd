@@ -1,12 +1,5 @@
 /***
- Theme Name: Stories
- Theme URI: http://demos.alithemes.com/html/stories
- Description: Personal Blog HTML Template
- Author: alithemes.com
- Author URI: http://alithemes.com
- Version: 1.0
- License: GNU General Public License v2 or later
- License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
 ==============================
 TABLE CONTENT
  Import Google Fonts
@@ -30,7 +23,6 @@ TABLE CONTENT
  Custom amine
 ***/
 
-/* Import third party CSS library */
 @import url(vendor/bootstrap.min.css);
 @import url(vendor/owl.carousel.min.css);
 @import url(vendor/ticker-style.css);

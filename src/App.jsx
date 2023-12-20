@@ -14,12 +14,13 @@ import Single from "./pages/Single.jsx";
 import Write from "./pages/Write.jsx";
 import AdminDashboard from "./adminpages/AdminDashboard.jsx";
 import { getTokenFromCookie } from "./service/TokenService.jsx";
+import Dashboard from "./adminpages/adminpages/Dashboard.jsx";
 
 const Layout = ({ children }) => (
   <>
     <Navbar />
     {children}
-    <Footer />
+    {/* <Footer /> */}
   </>
 );
 
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
     path: "/admin",
     element: token ? <AdminDashboard /> : <Login />,
   },
+  {
+    path:"/visitadmindashboard",
+    element: <Dashboard/>
+  }
 ]);
 
 const App = () => {

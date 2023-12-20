@@ -11,29 +11,16 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Write from '../pages/Write';
 import Dashboard from './adminpages/Dashboard';
+import Home from '../pages/Home';
 
 const AdminLayout = ({ children }) => (
   <>
     <Navbar />
+     <Home/>
      {children}
     <Footer />
   </>
 );
-
-const router = createBrowserRouter([
-  {
-    path: "/admin",
-    element: (
-      <AdminLayout>
-        <Routes>
-          <Route path="/admin" element={<Dashboard />} />
-          <Route path="/write" element={<Write />} />
-        </Routes>
-      </AdminLayout>
-    ),
-  },
-
-]);
 
 
 const AdminDashboard = () => {
