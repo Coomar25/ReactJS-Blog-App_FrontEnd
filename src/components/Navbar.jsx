@@ -12,16 +12,16 @@ const Navbar = () => {
   const { token } = getTokenFromCookie();
   return (
     <div>
-      <div class="theme-mode">
+      <div className="theme-mode">
         {/* <!-- Start Header --> */}
-        <header class="main-header header-style-1 font-heading">
-          <div class="header-sticky">
-            <div class="container align-self-center position-relative">
-              <div class="mobile_menu d-lg-none d-block"></div>
-              <div class="main-nav d-none d-lg-block float-start">
+        <header className="main-header header-style-1 font-heading">
+          <div className="header-sticky">
+            <div className="container align-self-center position-relative">
+              <div className="mobile_menu d-lg-none d-block"></div>
+              <div className="main-nav d-none d-lg-block float-start">
                 <nav>
                   {/* <!--Desktop menu--> */}
-                  <ul class="main-menu d-none d-lg-inline font-small">
+                  <ul className="main-menu d-none d-lg-inline font-small">
                     <li>
                       <Link to="/"> Home </Link>
                     </li>
@@ -60,40 +60,40 @@ const Navbar = () => {
                 </nav>
               </div>
 
-              <div class="float-end header-tools text-muted font-small">
+              <div className="float-end header-tools text-muted font-small">
 
 
-                <ul class="header-social-network d-inline-block list-inline mr-15">
+                <ul className="header-social-network d-inline-block list-inline mr-15">
 
 
                   { token ? (<ProfileButton/>) : 
                     (
                       <>
-                      <li class="list-inline-item">
+                      <li className="list-inline-item">
                       <a
-                        class="social-icon fb text-xs-center"
+                        className="social-icon fb text-xs-center"
                         target="_blank"
                         href="#"
                       >
-                        <i class="elegant-icon social_facebook"></i>
+                        <i className="elegant-icon social_facebook"></i>
                       </a>
                     </li>
-                    <li class="list-inline-item">
+                    <li className="list-inline-item">
                       <a
-                        class="social-icon tw text-xs-center"
+                        className="social-icon tw text-xs-center"
                         target="_blank"
                         href="#"
                       >
-                        <i class="elegant-icon social_twitter "></i>
+                        <i className="elegant-icon social_twitter "></i>
                       </a>
                     </li>
-                    <li class="list-inline-item">
+                    <li className="list-inline-item">
                       <a
-                        class="social-icon pt text-xs-center"
+                        className="social-icon pt text-xs-center"
                         target="_blank"
                         href="#"
                       >
-                        <i class="elegant-icon social_pinterest "></i>
+                        <i className="elegant-icon social_pinterest "></i>
                       </a>
                     </li>
                       </>
@@ -101,7 +101,7 @@ const Navbar = () => {
                   }
                 </ul>
               </div>
-              <div class="clearfix"></div>
+              <div className="clearfix"></div>
             </div>
           </div>
         </header>

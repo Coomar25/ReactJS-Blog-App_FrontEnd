@@ -26,37 +26,37 @@ const FeaturesPost = () => {
   console.log('three post', postToDisplay);
 
   return (
-    <div class="row">
+    <div className="row">
       {/* First post */}
-      <div class="col-lg-8 mb-30">
-        <div class="carausel-post-1 hover-up border-radius-10 overflow-hidden transition-normal position-relative wow fadeInUp animated">
-          <div class="arrow-cover"></div>
-          <div class="slide-fade">
-            <div class="position-relative post-thumb">
+      <div className="col-lg-8 mb-30">
+        <div className="carausel-post-1 hover-up border-radius-10 overflow-hidden transition-normal position-relative wow fadeInUp animated">
+          <div className="arrow-cover"></div>
+          <div className="slide-fade">
+            <div className="position-relative post-thumb">
               <div
                 className="thumb-overlay img-hover-slide position-relative"
                 style={{ backgroundImage: `url(${firstPost?.imagesOrMedia})` }}
               >
-                <a class="img-link" href="single.html"></a>
-                <span class="top-left-icon bg-warning">
-                  <i class="elegant-icon icon_star_alt"></i>
+                <a className="img-link" href="single.html"></a>
+                <span className="top-left-icon bg-warning">
+                  <i className="elegant-icon icon_star_alt"></i>
                 </span>
-                <div class="post-content-overlay text-white ml-30 mr-30 pb-30">
-                  <div class="entry-meta meta-0 font-small mb-20">
+                <div className="post-content-overlay text-white ml-30 mr-30 pb-30">
+                  <div className="entry-meta meta-0 font-small mb-20">
                     <a href="category.html">
-                      <span class="post-cat text-info text-uppercase">
+                      <span className="post-cat text-info text-uppercase">
                         {firstPost?.tagsOrCategories}
                       </span>
                     </a>
                   </div>
-                  <h3 class="post-title font-weight-900 mb-20">
-                    <a class="text-white" href="single.html">
+                  <h3 className="post-title font-weight-900 mb-20">
+                    <a className="text-white" href="single.html">
                       {firstPost?.title}
                     </a>
                   </h3>
-                  <div class="entry-meta meta-1 font-small text-white mt-10 pr-5 pl-5">
-                    <span class="post-on">{firstPost?.publicationDate}</span>
-                    {/* <span class="hit-count has-dot">23k Views</span> */}
+                  <div className="entry-meta meta-1 font-small text-white mt-10 pr-5 pl-5">
+                    <span className="post-on">{firstPost?.publicationDate}</span>
+                    {/* <span className="hit-count has-dot">23k Views</span> */}
                   </div>
                 </div>
               </div>
@@ -66,65 +66,65 @@ const FeaturesPost = () => {
       </div>
 
       <article
-        class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated"
+        className="col-lg-4 col-md-6 mb-30 wow fadeInUp animated"
         data-wow-delay="0.2s"
       >
-        <div class="post-card-1 border-radius-10 hover-up">
+        <div className="post-card-1 border-radius-10 hover-up">
           <div
-            class="post-thumb thumb-overlay img-hover-slide position-relative"
+            className="post-thumb thumb-overlay img-hover-slide position-relative"
             style={{ backgroundImage: `url(${secondPost?.imagesOrMedia})` }}
           >
-            <a class="img-link" href="single.html"></a>
-            <span class="top-right-icon bg-success">
-              <i class="elegant-icon icon_camera_alt"></i>
+            <a className="img-link" href="single.html"></a>
+            <span className="top-right-icon bg-success">
+              <i className="elegant-icon icon_camera_alt"></i>
             </span>
-            <ul class="social-share">
+            <ul className="social-share">
               <li>
                 <a href="#">
-                  <i class="elegant-icon social_share"></i>
+                  <i className="elegant-icon social_share"></i>
                 </a>
               </li>
               <li>
                 <a
-                  class="fb"
+                  className="fb"
                   href="#"
                   title="Share on Facebook"
                   target="_blank"
                 >
-                  <i class="elegant-icon social_facebook"></i>
+                  <i className="elegant-icon social_facebook"></i>
                 </a>
               </li>
               <li>
-                <a class="tw" href="#" target="_blank" title="Tweet now">
-                  <i class="elegant-icon social_twitter"></i>
+                <a className="tw" href="#" target="_blank" title="Tweet now">
+                  <i className="elegant-icon social_twitter"></i>
                 </a>
               </li>
               <li>
-                <a class="pt" href="#" target="_blank" title="Pin it">
-                  <i class="elegant-icon social_pinterest"></i>
+                <a className="pt" href="#" target="_blank" title="Pin it">
+                  <i className="elegant-icon social_pinterest"></i>
                 </a>
               </li>
             </ul>
           </div>
-          <div class="post-content p-30">
-            <div class="entry-meta meta-0 font-small mb-10">
+          <div className="post-content p-30">
+            <div className="entry-meta meta-0 font-small mb-10">
               <a href="category.html">
-                <span class="post-cat text-info">
+                <span className="post-cat text-info">
                   {secondPost?.tagsOrCategories}
                 </span>
               </a>
               {/* <a href="category.html">
-                <span class="post-cat text-success">Food</span>
+                <span className="post-cat text-success">Food</span>
               </a> */}
             </div>
-            <div class="d-flex post-card-content">
-              <h5 class="post-title mb-20 font-weight-900">
+            <div className="d-flex post-card-content">
+              <h5 className="post-title mb-20 font-weight-900">
                 <a href="single.html">{firstPost?.title}</a>
               </h5>
-              <div class="entry-meta meta-1 float-start font-x-small text-uppercase">
-                <span class="post-on">{secondPost?.publicationDate}</span>
-                {/* <span class="time-reading has-dot"></span> */}
-                {/* <span class="post-by has-dot">23k views</span> */}
+              <div className="entry-meta meta-1 float-start font-x-small text-uppercase">
+                <span className="post-on">{secondPost?.publicationDate}</span>
+                {/* <span className="time-reading has-dot"></span> */}
+                {/* <span className="post-by has-dot">23k views</span> */}
               </div>
             </div>
           </div>
@@ -139,56 +139,56 @@ const FeaturesPost = () => {
         return (
           <article
           key={index}
-          class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated"
+          className="col-lg-4 col-md-6 mb-30 wow fadeInUp animated"
         >
-          <div class="post-card-1 border-radius-10 hover-up">
+          <div className="post-card-1 border-radius-10 hover-up">
             <div
-              class="post-thumb thumb-overlay img-hover-slide position-relative"
+              className="post-thumb thumb-overlay img-hover-slide position-relative"
               style={{ backgroundImage: `url(${post?.imagesOrMedia})` }}
             >
-              <a class="img-link" href="single.html"></a>
-              <ul class="social-share">
+              <a className="img-link" href="single.html"></a>
+              <ul className="social-share">
                 <li>
                   <a href="#">
-                    <i class="elegant-icon social_share"></i>
+                    <i className="elegant-icon social_share"></i>
                   </a>
                 </li>
                 <li>
                   <a
-                    class="fb"
+                    className="fb"
                     href="#"
                     title="Share on Facebook"
                     target="_blank"
                   >
-                    <i class="elegant-icon social_facebook"></i>
+                    <i className="elegant-icon social_facebook"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="tw" href="#" target="_blank" title="Tweet now">
-                    <i class="elegant-icon social_twitter"></i>
+                  <a className="tw" href="#" target="_blank" title="Tweet now">
+                    <i className="elegant-icon social_twitter"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="pt" href="#" target="_blank" title="Pin it">
-                    <i class="elegant-icon social_pinterest"></i>
+                  <a className="pt" href="#" target="_blank" title="Pin it">
+                    <i className="elegant-icon social_pinterest"></i>
                   </a>
                 </li>
               </ul>
             </div>
-            <div class="post-content p-30">
-              <div class="entry-meta meta-0 font-small mb-10">
+            <div className="post-content p-30">
+              <div className="entry-meta meta-0 font-small mb-10">
                 <a href="category.html">
-                  <span class="post-cat text-warning">{post?.tagsOrCategories}</span>
+                  <span className="post-cat text-warning">{post?.tagsOrCategories}</span>
                 </a>
               </div>
-              <div class="d-flex post-card-content">
-                <h5 class="post-title mb-20 font-weight-900">
+              <div className="d-flex post-card-content">
+                <h5 className="post-title mb-20 font-weight-900">
                   <a href="single.html">{post?.title}</a>
                 </h5>
-                <div class="entry-meta meta-1 float-start font-x-small text-uppercase">
-                  <span class="post-on">17 July</span>
-                  <span class="time-reading has-dot">{post?.publicationDate}</span>
-                  {/* <span class="post-by has-dot">12k views</span> */}
+                <div className="entry-meta meta-1 float-start font-x-small text-uppercase">
+                  <span className="post-on">17 July</span>
+                  <span className="time-reading has-dot">{post?.publicationDate}</span>
+                  {/* <span className="post-by has-dot">12k views</span> */}
                 </div>
               </div>
             </div>
@@ -202,119 +202,119 @@ const FeaturesPost = () => {
       {/* ==================================================================================================================================== */}
 
       {/* <article
-        class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated"
+        className="col-lg-4 col-md-6 mb-30 wow fadeInUp animated"
         data-wow-delay="0.2s"
       >
-        <div class="post-card-1 border-radius-10 hover-up">
+        <div className="post-card-1 border-radius-10 hover-up">
           <div
-            class="post-thumb thumb-overlay img-hover-slide position-relative"
+            className="post-thumb thumb-overlay img-hover-slide position-relative"
             // style="background-image: url(assets/imgs/news/news-5.jpg)"
           >
-            <a class="img-link" href="single.html"></a>
-            <ul class="social-share">
+            <a className="img-link" href="single.html"></a>
+            <ul className="social-share">
               <li>
                 <a href="#">
-                  <i class="elegant-icon social_share"></i>
+                  <i className="elegant-icon social_share"></i>
                 </a>
               </li>
               <li>
                 <a
-                  class="fb"
+                  className="fb"
                   href="#"
                   title="Share on Facebook"
                   target="_blank"
                 >
-                  <i class="elegant-icon social_facebook"></i>
+                  <i className="elegant-icon social_facebook"></i>
                 </a>
               </li>
               <li>
-                <a class="tw" href="#" target="_blank" title="Tweet now">
-                  <i class="elegant-icon social_twitter"></i>
+                <a className="tw" href="#" target="_blank" title="Tweet now">
+                  <i className="elegant-icon social_twitter"></i>
                 </a>
               </li>
               <li>
-                <a class="pt" href="#" target="_blank" title="Pin it">
-                  <i class="elegant-icon social_pinterest"></i>
+                <a className="pt" href="#" target="_blank" title="Pin it">
+                  <i className="elegant-icon social_pinterest"></i>
                 </a>
               </li>
             </ul>
           </div>
-          <div class="post-content p-30">
-            <div class="entry-meta meta-0 font-small mb-10">
+          <div className="post-content p-30">
+            <div className="entry-meta meta-0 font-small mb-10">
               <a href="category.html">
-                <span class="post-cat text-danger">Travel</span>
+                <span className="post-cat text-danger">Travel</span>
               </a>
             </div>
-            <div class="d-flex post-card-content">
-              <h5 class="post-title mb-20 font-weight-900">
+            <div className="d-flex post-card-content">
+              <h5 className="post-title mb-20 font-weight-900">
                 <a href="single.html">
                   Life and Death in the Empire of the Tiger
                 </a>
               </h5>
-              <div class="entry-meta meta-1 float-start font-x-small text-uppercase">
-                <span class="post-on">7 August</span>
-                <span class="time-reading has-dot">15 mins read</span>
-                <span class="post-by has-dot">500 views</span>
+              <div className="entry-meta meta-1 float-start font-x-small text-uppercase">
+                <span className="post-on">7 August</span>
+                <span className="time-reading has-dot">15 mins read</span>
+                <span className="post-by has-dot">500 views</span>
               </div>
             </div>
           </div>
         </div>
       </article>
       <article
-        class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated"
+        className="col-lg-4 col-md-6 mb-30 wow fadeInUp animated"
         data-wow-delay="0.4s"
       >
-        <div class="post-card-1 border-radius-10 hover-up">
+        <div className="post-card-1 border-radius-10 hover-up">
           <div
-            class="post-thumb thumb-overlay img-hover-slide position-relative"
+            className="post-thumb thumb-overlay img-hover-slide position-relative"
             // style="background-image: url(assets/imgs/news/news-11.jpg)"
           >
-            <a class="img-link" href="single.html"></a>
-            <span class="top-right-icon bg-info">
-              <i class="elegant-icon icon_headphones"></i>
+            <a className="img-link" href="single.html"></a>
+            <span className="top-right-icon bg-info">
+              <i className="elegant-icon icon_headphones"></i>
             </span>
-            <ul class="social-share">
+            <ul className="social-share">
               <li>
                 <a href="#">
-                  <i class="elegant-icon social_share"></i>
+                  <i className="elegant-icon social_share"></i>
                 </a>
               </li>
               <li>
                 <a
-                  class="fb"
+                  className="fb"
                   href="#"
                   title="Share on Facebook"
                   target="_blank"
                 >
-                  <i class="elegant-icon social_facebook"></i>
+                  <i className="elegant-icon social_facebook"></i>
                 </a>
               </li>
               <li>
-                <a class="tw" href="#" target="_blank" title="Tweet now">
-                  <i class="elegant-icon social_twitter"></i>
+                <a className="tw" href="#" target="_blank" title="Tweet now">
+                  <i className="elegant-icon social_twitter"></i>
                 </a>
               </li>
               <li>
-                <a class="pt" href="#" target="_blank" title="Pin it">
-                  <i class="elegant-icon social_pinterest"></i>
+                <a className="pt" href="#" target="_blank" title="Pin it">
+                  <i className="elegant-icon social_pinterest"></i>
                 </a>
               </li>
             </ul>
           </div>
-          <div class="post-content p-30">
-            <div class="entry-meta meta-0 font-small mb-10">
+          <div className="post-content p-30">
+            <div className="entry-meta meta-0 font-small mb-10">
               <a href="category.html">
-                <span class="post-cat text-success">Lifestyle</span>
+                <span className="post-cat text-success">Lifestyle</span>
               </a>
             </div>
-            <div class="d-flex post-card-content">
-              <h5 class="post-title mb-20 font-weight-900">
+            <div className="d-flex post-card-content">
+              <h5 className="post-title mb-20 font-weight-900">
                 <a href="single.html">When Two Wheels Are Better Than Four</a>
               </h5>
-              <div class="entry-meta meta-1 float-start font-x-small text-uppercase">
-                <span class="post-on">15 Jun</span>
-                <span class="time-reading has-dot">9 mins read</span>
-                <span class="post-by has-dot">1.2k views</span>
+              <div className="entry-meta meta-1 float-start font-x-small text-uppercase">
+                <span className="post-on">15 Jun</span>
+                <span className="time-reading has-dot">9 mins read</span>
+                <span className="post-by has-dot">1.2k views</span>
               </div>
             </div>
           </div>

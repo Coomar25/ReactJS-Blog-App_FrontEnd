@@ -6,15 +6,15 @@ const Home = () => {
   return (
     <div>
       <main>
-        <div class="container">
-          <div class="loop-grid mb-30">
+        <div className="container">
+          <div className="loop-grid mb-30">
             {/* ========================================================== */}
             <FeaturesPost />
             {/* ========================================================== */}
           </div>
         </div>
-        <div class="pt-50 pb-50">
-          <div class="container">
+        <div className="pt-50 pb-50">
+          <div className="container">
             {/* ========================================================== */}
             <TwoColumnHomePost />
             {/* ========================================================== */}
