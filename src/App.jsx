@@ -15,8 +15,9 @@ import Write from "./pages/Write.jsx";
 import AdminDashboard from "./adminpages/AdminDashboard.jsx";
 import { getTokenFromCookie } from "./service/TokenService.jsx";
 import Dashboard from "./adminpages/adminpages/Dashboard.jsx";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import InnerNews from "./components/InnerNews/InnerNews.jsx";
 
 const Layout = ({ children }) => (
   <>
@@ -25,7 +26,6 @@ const Layout = ({ children }) => (
     {/* <Footer /> */}
   </>
 );
-
 
 const { token } = getTokenFromCookie();
 
@@ -40,6 +40,7 @@ const router = createBrowserRouter([
           <Route path="write" element={<Write />} />
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
+          <Route path="/:tagsOrCategories/:slug" element={<InnerNews />} />
         </Routes>
       </Layout>
     ),
@@ -49,19 +50,17 @@ const router = createBrowserRouter([
     element: token ? <AdminDashboard /> : <Login />,
   },
   {
-    path:"/visitadmindashboard",
-    element: <Dashboard/>
-  }
+    path: "/visitadmindashboard",
+    element: <Dashboard />,
+  },
 ]);
 
 const App = () => {
   return (
     <div>
-
-       <ToastContainer />
+      <ToastContainer />
       <RouterProvider router={router} />
       {/* {process.env.NODE_ENV === 'development' ? process.env.REACT_APP_DEV_MODE : process.env.REACT_APP_PRO_MODE} */}
-
     </div>
   );
 };
