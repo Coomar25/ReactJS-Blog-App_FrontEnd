@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.0.1",
     "axios": "^1.6.2",
     "bootstrap": "^5.3.2",
     "draft-js": "^0.11.7",
@@ -25,6 +26,7 @@
     "react-dom": "^18.2.0",
     "react-draft-wysiwyg": "^1.15.0",
     "react-quill": "^2.0.0",
+    "react-redux": "^9.0.4",
     "react-router-dom": "^6.20.1",
     "react-toastify": "^9.1.3"
   },
