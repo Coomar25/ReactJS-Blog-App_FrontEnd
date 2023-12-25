@@ -41,6 +41,10 @@ const router = createBrowserRouter([
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
           <Route path="/:tagsOrCategories/:slug" element={<InnerNews />} />
+          <Route
+            path="/:tagsOrCategories/:tagsOrCategories/:slug"
+            element={<InnerNews />}
+          />
         </Routes>
       </Layout>
     ),
