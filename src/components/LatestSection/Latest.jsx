@@ -27,7 +27,7 @@ const Latest = () => {
       </div>
       <div className="loop-list loop-list-style-1">
         <div className="row">
-          {latestpost.map((latestblog, index) => (
+          {latestpost.slice(0, 4).map((latestblog, index) => (
             <article
               key={index}
               className="col-md-6 mb-40 wow fadeInUp  animated"
@@ -81,11 +81,13 @@ const Latest = () => {
                   </div>
                   <div className="post-content p-30">
                     <div className="entry-meta meta-0 font-small mb-10">
-                      <a href="category.html">
+                      {/* <a href="category.html">
                         <span className="post-cat text-info">Artists</span>
-                      </a>
+                      </a> */}
                       <a href="category.html">
-                        <span className="post-cat text-success">Film</span>
+                        <span className="post-cat text-success">
+                          {latestblog?.tagsOrCategories}
+                        </span>
                       </a>
                     </div>
                     <div className="d-flex post-card-content">
