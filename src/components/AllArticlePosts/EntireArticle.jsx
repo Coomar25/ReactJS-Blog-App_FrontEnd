@@ -317,8 +317,8 @@ const EntireArticle = () => {
       </div>
 
       <div className="pagination-area mb-30 wow fadeInUp animated">
-        <nav aria-label="Page navigation example">
-          <ul className="pagination justify-content-start">
+        <nav aria-label=" Page navigation example">
+          <ul className="entireblogPagination pagination justify-content-start">
             <li className="page-item">
               <a className="page-link" href="#">
                 <i className="elegant-icon arrow_left"></i>

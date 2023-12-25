@@ -26,7 +26,7 @@ const Navbar = () => {
                       <Link to="/"> Home </Link>
                     </li>
                     <li>
-                      <Link to="/single">Single</Link>
+                      <Link to="/programming">Programming</Link>
                     </li>
                     {/* ========================================================================================================== */}
                     {/* =========================================== Conditiona Navbar here ======================================= */}
@@ -45,60 +45,52 @@ const Navbar = () => {
                     )}
 
                     {token ? null : (
-                       <li>
-                       {}
-                       <Link to="/register">
-                         <Register />
-                       </Link>
-                     </li>
+                      <li>
+                        {}
+                        <Link to="/register">
+                          <Register />
+                        </Link>
+                      </li>
                     )}
-
-                   
                   </ul>
-
-                 
                 </nav>
               </div>
 
               <div className="float-end header-tools text-muted font-small">
-
-
                 <ul className="header-social-network d-inline-block list-inline mr-15">
-
-
-                  { token ? (<ProfileButton/>) : 
-                    (
-                      <>
+                  {token ? (
+                    <ProfileButton />
+                  ) : (
+                    <>
                       <li className="list-inline-item">
-                      <a
-                        className="social-icon fb text-xs-center"
-                        target="_blank"
-                        href="#"
-                      >
-                        <i className="elegant-icon social_facebook"></i>
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a
-                        className="social-icon tw text-xs-center"
-                        target="_blank"
-                        href="#"
-                      >
-                        <i className="elegant-icon social_twitter "></i>
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a
-                        className="social-icon pt text-xs-center"
-                        target="_blank"
-                        href="#"
-                      >
-                        <i className="elegant-icon social_pinterest "></i>
-                      </a>
-                    </li>
-                      </>
-                    )
-                  }
+                        <a
+                          className="social-icon fb text-xs-center"
+                          target="_blank"
+                          href="#"
+                        >
+                          <i className="elegant-icon social_facebook"></i>
+                        </a>
+                      </li>
+                      <li className="list-inline-item">
+                        <a
+                          className="social-icon tw text-xs-center"
+                          target="_blank"
+                          href="#"
+                        >
+                          <i className="elegant-icon social_twitter "></i>
+                        </a>
+                      </li>
+                      <li className="list-inline-item">
+                        <a
+                          className="social-icon pt text-xs-center"
+                          target="_blank"
+                          href="#"
+                        >
+                          <i className="elegant-icon social_pinterest "></i>
+                        </a>
+                      </li>
+                    </>
+                  )}
                 </ul>
               </div>
               <div className="clearfix"></div>
