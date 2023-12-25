@@ -16,7 +16,7 @@ const TwoColumnHomePost = () => {
         <div className="widget-area">
           <OwnerProfile />
           <MostPopular />
-          <LastComment />
+          {/* <LastComment /> */}
         </div>
       </div>
     </div>

@@ -1,12 +1,12 @@
-.writePost{
-    /* display: flex; */
-    height: 80vh;
-    margin: auto;
-    padding:4rem 20rem;
-    justify-content: center;
+.writePost {
+  /* display: flex; */
+  height: 80vh;
+  margin: auto;
+  padding: 4rem 20rem;
+  justify-content: center;
 }
 
-.loginSection{
+.loginSection {
   position: absolute;
   width: 100%;
   top: 50%;
@@ -15,130 +15,130 @@
   background-color: rebeccapurple;
 }
 
-
-
-
 .wrapper-class {
-    padding: 1rem;
-    border: 1px solid #ccc;
-  }
-  .editor-class {
-    background-color:lightgray;
-    padding: 1rem;
-    border: 1px solid #ccc;
-  }
-  .toolbar-class {
-    border: 1px solid #ccc;
-  }
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+.editor-class {
+  background-color: lightgray;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+.toolbar-class {
+  border: 1px solid #ccc;
+}
 
+/* ==================Profile Button ================== */
 
-  /* ==================Profile Button ================== */
+nav {
+  background-color: #fff;
+  padding: 0 3rem;
+  border-radius: 0.625rem;
+}
 
-  nav {
-    background-color: #fff;
-    padding: 0 3rem;
-    border-radius: 0.625rem;
-  }
-  
-  ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-  }
-  
-  li {
-    list-style-type: none;
-    position: relative;
-    padding: 0.625rem 0 0.5rem;
-  }
-  li ul {
-    flex-direction: column;
-    position: absolute;
-    background-color: white;
-    align-items: flex-start;
-    transition: all 0.5s ease;
-    width: 20rem;
-    right: -3rem;
-    top: 4.5rem;
-    border-radius: 0.325rem;
-    gap: 0;
-    padding: 1rem 0rem;
-    opacity: 0;
-    box-shadow: 0px 0px 100px rgba(20, 18, 18, 0.25);
-    display: none;
-  }
-  
-  ul li:hover > ul,
-  ul li ul:hover {
-    visibility: visible;
-    opacity: 1;
-    display: flex;
-  }
-  
-  .material-icons-outlined {
-    color: #888888;
-    transition: all 0.3s ease-out;
-  }
-  
-  .material-icons-outlined:hover {
-    color: #ff9800;
-    transform: scale(1.25) translateY(-4px);
-    cursor: pointer;
-  }
-  
-  
-  .profile {
-    height: 3rem;
-    width: auto;
-    cursor: pointer;
-  }
-  
-  .sub-item {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 0.725rem;
-    cursor: pointer;
-    padding: 0.5rem 1.5rem;
-  }
-  
-  .sub-item:hover {
-    background-color: rgba(232, 232, 232, 0.4);
-  }
-  
-  .sub-item:hover .material-icons-outlined {
-    color: #ff9800;
-    transform: scale(1.08) translateY(-2px);
-    cursor: pointer;
-  }
-  
-  .sub-item:hover p {
-    color: #000;
-    cursor: pointer;
-  }
-  
-  .sub-item p {
-    font-size: 0.85rem;
-    color: #888888;
-    font-weight: 500;
-    margin: 0.4rem 0;
-    flex: 1;
-  }
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
 
-  .profileText{
-    color: #000;
-  }
+li {
+  list-style-type: none;
+  position: relative;
+  padding: 0.625rem 0 0.5rem;
+}
+li ul {
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  align-items: flex-start;
+  transition: all 0.5s ease;
+  width: 20rem;
+  right: -3rem;
+  top: 4.5rem;
+  border-radius: 0.325rem;
+  gap: 0;
+  padding: 1rem 0rem;
+  opacity: 0;
+  box-shadow: 0px 0px 100px rgba(20, 18, 18, 0.25);
+  display: none;
+}
 
-  .profileImage{
-    width: 70px;
-    height: 45px;
-    border-radius: 50%;
-  }
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+}
 
+.material-icons-outlined {
+  color: #888888;
+  transition: all 0.3s ease-out;
+}
 
-  .list-post{
-    display: flex;
-    flex-direction: column;
-  }
+.material-icons-outlined:hover {
+  color: #ff9800;
+  transform: scale(1.25) translateY(-4px);
+  cursor: pointer;
+}
+
+.profile {
+  height: 3rem;
+  width: auto;
+  cursor: pointer;
+}
+
+.sub-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.725rem;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+}
+
+.sub-item:hover {
+  background-color: rgba(232, 232, 232, 0.4);
+}
+
+.sub-item:hover .material-icons-outlined {
+  color: #ff9800;
+  transform: scale(1.08) translateY(-2px);
+  cursor: pointer;
+}
+
+.sub-item:hover p {
+  color: #000;
+  cursor: pointer;
+}
+
+.sub-item p {
+  font-size: 0.85rem;
+  color: #888888;
+  font-weight: 500;
+  margin: 0.4rem 0;
+  flex: 1;
+}
+
+.profileText {
+  color: #000;
+}
+
+.profileImage {
+  width: 70px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.list-post {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem !important;
+}
+
+.entireblogPagination {
+  display: flex;
+  gap: 0rem;
+}

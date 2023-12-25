@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 const Latest = () => {
   const [latestpost, setLatestpost] = useState([]);
 
@@ -39,6 +40,7 @@ const Latest = () => {
                     style={{
                       backgroundImage: `url(${latestblog?.imagesOrMedia})`,
                     }}
+                    imagesOrMedia
                   >
                     <a className="img-link" href="single.html"></a>
                     <ul className="social-share">
@@ -81,9 +83,9 @@ const Latest = () => {
                   </div>
                   <div className="post-content p-30">
                     <div className="entry-meta meta-0 font-small mb-10">
-                      {/* <a href="category.html">
+                      <a href="category.html">
                         <span className="post-cat text-info">Artists</span>
-                      </a> */}
+                      </a>
                       <a href="category.html">
                         <span className="post-cat text-success">
                           {latestblog?.tagsOrCategories}
