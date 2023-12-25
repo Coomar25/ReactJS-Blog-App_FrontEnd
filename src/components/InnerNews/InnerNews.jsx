@@ -5,6 +5,7 @@ import HeaderAuthorComponent from "./HeaderAuthorComponent";
 import InnerNewsContent from "./InnerNewsContent";
 import { setInnerData } from "../../redux/ackAction/action";
 import { useDispatch } from "react-redux";
+import AuthorBox from "./_Particles/AuthorBox";
 
 const InnerNews = () => {
   const dispatch = useDispatch();
@@ -52,7 +53,7 @@ const InnerNews = () => {
           <InnerNewsContent />
 
           {/* <!--author box--> */}
-
+          {/* <AuthorBox /> */}
           {/* <!--related posts--> */}
 
           {/* <!--Comments--> */}
