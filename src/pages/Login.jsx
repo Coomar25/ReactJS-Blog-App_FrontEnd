@@ -13,10 +13,13 @@ const Login = () => {
   const handleSubmitForm = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/login", {
-        email: email,
-        password: password,
-      });
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}/login`,
+        {
+          email: email,
+          password: password,
+        }
+      );
       console.log(response.data);
       const token = response.data.token;
       const user = response.data.user;
@@ -24,6 +27,7 @@ const Login = () => {
       console.log(user);
       setTokenInCookie(token, user);
       navigate("/");
+      window.location.reload();
     } catch (error) {
       console.log("Login Failed", error);
     }
@@ -47,7 +51,11 @@ const Login = () => {
                     <div className="account-logo-box">
                       <div className="text-center">
                         <a href="index.html">
-                          <img src={logoImage} alt="" height="30" />
+                          <img
+                            src="https://acad.xlri.ac.in/evening/images/login.svg"
+                            alt=""
+                            height="240"
+                          />
                         </a>
                       </div>
                       <h5 className="text-uppercase mb-1 mt-4">Sign In</h5>

@@ -7,7 +7,7 @@ const OwnerProfile = () => {
           src="https://scontent.fktm6-1.fna.fbcdn.net/v/t39.30808-6/393857726_2126039397761509_7434000108516865369_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=kGbYuQ3DATQAX_cVBLY&_nc_ht=scontent.fktm6-1.fna&oh=00_AfDfOeJ62CcDsGAgvwpiHxAkIXquCFvdC3UFKWpT89Cwhw&oe=658E04BE"
           alt=""
         />
-        <h5 className="mb-20">Hello, I'm Steven</h5>
+        <h5 className="mb-20">Hello, I'm Kumar Chaudhary</h5>
         <p className="font-medium text-muted">
           Hey, I'm Kumar Chaudhary, a software engineer from Nepal. Four years
           ago, I ditched other engineering fields for a coding adventure. Life
