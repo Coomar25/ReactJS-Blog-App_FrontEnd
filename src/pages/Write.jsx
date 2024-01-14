@@ -32,17 +32,20 @@ const Write = () => {
       return;
     }
 
-    const postData = {
-      title: title,
-      category: category,
-      content: content,
-      author: user.username,
-      imagesOrMedia: imageormedia,
-      user: user._id,
-    };
+    const formData = new FormData();
+    formData.append("title", title);
+    formData.append("category", category);
+    formData.append("content", content);
+    formData.append("author", user.username);
+    formData.append("user", user._id);
+    formData.append("imagesOrMedia", imageormedia);
+
+    if (imagefile) {
+      formData.append("image", imagefile);
+    }
 
     axios
-      .post(`${import.meta.env.VITE_API_URL}/post/addpost`, postData, {
+      .post(`${import.meta.env.VITE_API_URL}/post/addpost`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
@@ -82,7 +85,7 @@ const Write = () => {
       };
       reader.readAsDataURL(file);
     }
-    // to previe uploaded image code ended here
+    // to preview uploaded image code ended here
   }
 
   const handleEditorChange = (value) => {
